@@ -1,15 +1,17 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head> 
- <title>jQuery Star Rating Plugin v3.14 (2012-02-08)</title>
+ <title>jQuery Star Rating Plugin v4.00 (2013-02-18)</title>
  <!--// plugin-specific resources //-->
 	<script src='jquery.js' type="text/javascript"></script>
 	<script src='jquery.MetaData.js' type="text/javascript" language="javascript"></script>
  <script src='jquery.rating.js' type="text/javascript" language="javascript"></script>
  <link href='jquery.rating.css' type="text/css" rel="stylesheet"/>
  <!--// documentation resources //-->
-	<script src='documentation/documentation.js' type="text/javascript"></script>
+ <link type="text/css" href="/@/js/jquery/ui/jquery.ui.css" rel="stylesheet" />
+ <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
  <link href='documentation/documentation.css' type="text/css" rel="stylesheet"/>
+	<script src='documentation/documentation.js' type="text/javascript"></script>
 </head>
 <body>
 <div class="Clear" id="wrap">
@@ -22,7 +24,7 @@
     <td valign="middle" width="10">&nbsp;</td>
     <td valign="middle">
      <h1 style="float:left;">jQuery Star Rating Plugin</h1>
-     v<strong style="color:#000;">3.14 (2012-02-08)</strong>
+     v<strong style="color:#000;">4.00 (2013-02-18)</strong>
     </td>
     <td valign="middle" width="90" align="right">
      <strong style="color:#900;">Buy us a pint</strong>:
@@ -112,9 +114,8 @@
       basic functionality will still be available even if Javascript is disabled.
      </li>
      <li>
-      <strong style="color: rgb(0, 153, 0);">NEW</strong> (12-Mar-08):
-      In read only mode (using the 'readOnly' option or <code>disabled</code> property), the plugin is a neat way of
-      displaying star-like values without any additional code
+      <strong style="color: rgb(0, 153, 0);">NEW</strong> (18-Feb-2013):
+      Compatible with jQuery 1.3+ and the latest 1.9!
      </li>
     </ul>
     
@@ -252,6 +253,10 @@
       </td>
      </tr>
     </table>
+    
+    <!-- advertising -->
+    <p>Make sure to upload these changes on to your server<!--<a href="http://www.webhostingsearch.com/blog-hosting.php">blog hosting server</a>-->, this would be a great plugin for your blogs and review sites</p>
+    
    </div><!--// tab-Overview //-->
    
    <div id="tab-Testing">
@@ -845,10 +850,11 @@ $(function(){
      the interface would still work with Javascript disabled making it <em>beautifully downgradable</em>. </li>
     <li> Then I came along and noticed a fundamental flaw with the latter: there could only
      be one star rating control per page. The rest of the story is what you will see below... </li>
-    <li> <strong style="color: rgb(0, 153, 0);">NEW</strong> (12-Mar-08): Then <strong>Keith Wood</strong> added some very nice functionality to the plugin:
+    <li> (12-Mar-08): Then <strong>Keith Wood</strong> added some very nice functionality to the plugin:
      option to disable the cancel button, option to make the plugin readOnly and ability to accept any value (other than whole numbers) </li>
-    <li> <strong style="color: rgb(0, 153, 0);">NEW</strong> (20-Mar-08): Now supports half-star, third-star, quater-star, etc... Not additional code required. No additional images required. </li>
-    <li> <strong style="color: rgb(0, 153, 0);">NEW</strong> (31-Mar-08): Two new events, hover/blur (arguments: [value, linkElement]) </li>
+    <li> (20-Mar-08): Now supports half-star, third-star, quater-star, etc... Not additional code required. No additional images required. </li>
+    <li> (31-Mar-08): Two new events, hover/blur (arguments: [value, linkElement]) </li>
+    <li> <strong style="color: rgb(0, 153, 0);">NEW</strong> (18-Feb-2013): Compatible with jQuery 1.6, 1.7, 1.8 and 1.9! </li>
     </ul>
    </div><!--// tab-Background //-->
    
@@ -864,7 +870,7 @@ $(function(){
       <td valign="top">
        <big>
         <img src="documentation/download.gif" style="margin:0 5px 5px 0; float:left;">
-        v<strong>3.14</strong>
+        v<strong>4.00</strong>
         <a href="http://jquery-star-rating-plugin.googlecode.com/svn/trunk/star-rating.zip"><strong>star-rating.zip</strong></a>
        </big>
       </td>
@@ -943,7 +949,7 @@ $(function(){
     <h2>Alternative Download - From this website</h2>
     <p>
      Just in case it's the end of the world and the Google Code site becomes unavailable,
-     the project files can also be downloaded form this site.
+     the project files can also be downloaded from this site.
      <br/>
      However, please note that this site is updated periodically whereas the Google Code
      project is kept up-to-date almost instantaneously. If you'd like the very latest
@@ -956,7 +962,7 @@ $(function(){
       <td valign="top" align="right">Full Package:</td>
       <td valign="top">
        <img src="documentation/download.gif" style="margin:0 5px 5px 0; float:left;">
-       v<strong>3.14</strong>
+       v<strong>4.00</strong>
        <a href="./star-rating.zip"><strong>star-rating.zip</strong></a>
       </td>
      </tr>

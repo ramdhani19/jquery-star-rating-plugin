@@ -1,5 +1,5 @@
 /*
- ### jQuery Star Rating Plugin v3.14 - 2012-01-26 ###
+ ### jQuery Star Rating Plugin v4.00 - 2013-02-18 ###
  * Home: http://www.fyneworks.com/jquery/star-rating/
  * Code: http://code.google.com/p/jquery-star-rating-plugin/
  *
@@ -14,7 +14,7 @@
 /*# AVOID COLLISIONS #*/
 	
 	// IE6 Background Image Fix
-	if ($.browser.msie) try { document.execCommand("BackgroundImageCache", false, true)} catch(e) { };
+	if (($.browser && $.browser.msie) || $.support.opacity) try { document.execCommand("BackgroundImageCache", false, true)} catch(e) { };
 	// Thanks to http://www.visualjquery.com/rating/rating_redux.html
 	
 	// plugin initialization
