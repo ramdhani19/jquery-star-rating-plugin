@@ -12,7 +12,7 @@
 /*# AVOID COLLISIONS #*/
 	
 	// IE6 Background Image Fix
-	if (($.browser && $.browser.msie) || $.support.opacity) try { document.execCommand("BackgroundImageCache", false, true)} catch(e) { };
+	if ((!$.support.opacity && !$.support.style)) try { document.execCommand("BackgroundImageCache", false, true)} catch(e) { };
 	// Thanks to http://www.visualjquery.com/rating/rating_redux.html
 	
 	// plugin initialization
