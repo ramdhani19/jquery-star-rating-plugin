@@ -1,5 +1,5 @@
 /*
- ### jQuery Star Rating Plugin v4.00 - 2013-02-18 ###
+ ### jQuery Star Rating Plugin v4.01 - 2013-02-23 ###
  * Home: http://www.fyneworks.com/jquery/star-rating/
  * Code: http://code.google.com/p/jquery-star-rating-plugin/
  *
@@ -267,57 +267,44 @@
 		
 		
 		select: function(value,wantCallBack){ // select a value
-					
-					// ***** MODIFICATION *****
-					// Thanks to faivre.thomas - http://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=27
-					//
-					// ***** LIST OF MODIFICATION *****
-					// ***** added Parameter wantCallBack : false if you don't want a callback. true or undefined if you want postback to be performed at the end of this method'
-					// ***** recursive calls to this method were like : ... .rating('select') it's now like .rating('select',undefined,wantCallBack); (parameters are set.)
-					// ***** line which is calling callback
-					// ***** /LIST OF MODIFICATION *****
-			
 			var control = this.data('rating'); if(!control) return this;
 			// do not execute when control is in read-only mode
 			if(control.readOnly) return;
 			// clear selection
 			control.current = null;
 			// programmatically (based on user input)
-			if(typeof value!='undefined'){
+			if(typeof value!='undefined' || this.length>1){
 			 // select by index (0 based)
 				if(typeof value=='number')
  			 return $(control.stars[value]).rating('select',undefined,wantCallBack);
 				// select by literal value (must be passed as a string
-				if(typeof value=='string')
+				if(typeof value=='string'){
 					//return
 					$.each(control.stars, function(){
+ 					//console.log($(this).data('rating.input'), $(this).data('rating.input').val(), value, $(this).data('rating.input').val()==value?'BINGO!':'');
 						if($(this).data('rating.input').val()==value) $(this).rating('select',undefined,wantCallBack);
 					});
+					// don't break the chain
+  			return this;
+				};
 			}
-			else
+			else{
 				control.current = this[0].tagName=='INPUT' ?
 				 this.data('rating.star') :
 					(this.is('.rater-'+ control.serial) ? this : null);
-
+			};
 			// Update rating control state
 			this.data('rating', control);
 			// Update display
 			this.rating('draw');
 			// find data for event
 			var input = $( control.current ? control.current.data('rating.input') : null );
+			// change selection - required since 1.9, see http://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=123
+			$(input)[0].checked=true;
 			// click callback, as requested here: http://plugins.jquery.com/node/1655
-					
-					// **** MODIFICATION *****
-					// Thanks to faivre.thomas - http://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=27
-					//
-					//old line doing the callback :
-					//if(control.callback) control.callback.apply(input[0], [input.val(), $('a', control.current)[0]]);// callback event
-					//
-					//new line doing the callback (if i want :)
-					if((wantCallBack ||wantCallBack == undefined) && control.callback) control.callback.apply(input[0], [input.val(), $('a', control.current)[0]]);// callback event
-					//to ensure retro-compatibility, wantCallBack must be considered as true by default
-					// **** /MODIFICATION *****
-					
+			if((wantCallBack ||wantCallBack == undefined) && control.callback) control.callback.apply(input[0], [input.val(), $('a', control.current)[0]]);// callback event
+			// don't break the chain
+			return this;
   },// $.fn.rating.select
 		
 		
@@ -381,6 +368,7 @@
 	*/
 	$(function(){
 	 $('input[type=radio].star').rating();
+		//if(window.location.toString().match(/(l1|l2|local)\b/gi)) $('input').show();
 	});
 	
 	

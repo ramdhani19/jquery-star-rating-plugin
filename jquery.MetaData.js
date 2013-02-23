@@ -5,7 +5,6 @@
  *
 	* Licensed under http://en.wikipedia.org/wiki/MIT_License
  *
- * Revision: $Id$
  *
  */
 

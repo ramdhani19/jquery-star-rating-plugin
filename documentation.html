@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head> 
- <title>jQuery Star Rating Plugin v4.00 (2013-02-18)</title>
+ <title>jQuery Star Rating Plugin v4.01 (2013-02-23)</title>
  <!--// plugin-specific resources //-->
 	<script src='jquery.js' type="text/javascript"></script>
 	<script src='jquery.MetaData.js' type="text/javascript" language="javascript"></script>
@@ -25,7 +25,7 @@
     <td valign="middle" width="10">&nbsp;</td>
     <td valign="middle">
      <h1 style="float:left;">jQuery Star Rating Plugin</h1>
-     v<strong style="color:#000;">4.00 (2013-02-18)</strong>
+     v<strong style="color:#000;">4.01 (2013-02-23)</strong>
     </td>
     <td valign="middle" width="90" align="right">
      <strong style="color:#900;">Buy us a pint</strong>:
@@ -733,19 +733,19 @@ $(function(){
      <span></span>
      <br/>
      By index:
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',0)" value="0"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',1)" value="1"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',2)" value="2"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',3)" value="3"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',4)" value="4"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',0)" value="0"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',1)" value="1"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',2)" value="2"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',3)" value="3"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',4)" value="4"/>
      eg.: $('input').rating('select',3)
      <br/>
      By value:
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',this.value)" value="A"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',this.value)" value="B"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',this.value)" value="C"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',this.value)" value="D"/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('select',this.value)" value="E"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',this.value)" value="A"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',this.value)" value="B"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',this.value)" value="C"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',this.value)" value="D"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('select',this.value)" value="E"/>
      eg.: $('input').rating('select','C')
     </form>
     
@@ -776,10 +776,10 @@ $(function(){
      "/>
      <span></span>
      <br/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('readOnly',true)" value="Set readOnly = true"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('readOnly',true)" value="Set readOnly = true"/>
      eg.: $('input').rating('readOnly',true)
      <br/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('readOnly',false)" value="Set readOnly = false"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('readOnly',false)" value="Set readOnly = false"/>
      eg.: $('input').rating('readOnly',false) or simply $('input').rating('readOnly');
     </form>
     
@@ -810,10 +810,10 @@ $(function(){
      "/>
      <span></span>
      <br/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('disable')" value="disable"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('disable')" value="disable"/>
      eg.: $('input').rating('disable')
      <br/>
-     <input type="button" onClick="javascript:$('input',this.form).rating('enable')" value="enable"/>
+     <input type="button" onClick="javascript:$('input[type=radio]',this.form).rating('enable')" value="enable"/>
      eg.: $('input').rating('enable');
     </form>
    </div><!--// tab-API //-->
@@ -871,7 +871,7 @@ $(function(){
       <td valign="top">
        <big>
         <img src="documentation/download.gif" style="margin:0 5px 5px 0; float:left;">
-        v<strong>4.00</strong>
+        v<strong>4.01</strong>
         <a href="http://jquery-star-rating-plugin.googlecode.com/svn/trunk/star-rating.zip"><strong>star-rating.zip</strong></a>
        </big>
       </td>
@@ -963,7 +963,7 @@ $(function(){
       <td valign="top" align="right">Full Package:</td>
       <td valign="top">
        <img src="documentation/download.gif" style="margin:0 5px 5px 0; float:left;">
-       v<strong>4.00</strong>
+       v<strong>4.01</strong>
        <a href="./star-rating.zip"><strong>star-rating.zip</strong></a>
       </td>
      </tr>
