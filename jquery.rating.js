@@ -251,7 +251,7 @@
 			this.rating('drain');
 			// Set control value
 			if(control.current){
-				control.current.data('rating.input').attr('checked','checked');
+				control.current.data('rating.input').attr('checked','checked').prop('checked',true);
 				control.current.prevAll().andSelf().filter('.rater-'+ control.serial).addClass('star-rating-on');
 			}
 			else
@@ -300,7 +300,7 @@
 			// find data for event
 			var input = $( control.current ? control.current.data('rating.input') : null );
 			// change selection - required since 1.9, see http://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=123
-			$(input)[0].checked=true;
+			$(input).attr('checked','checked')[0].checked=true;
 			// click callback, as requested here: http://plugins.jquery.com/node/1655
 			if((wantCallBack ||wantCallBack == undefined) && control.callback) control.callback.apply(input[0], [input.val(), $('a', control.current)[0]]);// callback event
 			// don't break the chain
