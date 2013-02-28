@@ -300,7 +300,7 @@
 			// find data for event
 			var input = $( control.current ? control.current.data('rating.input') : null );
 			// change selection - required since 1.9, see http://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=123
-			$(input).attr('checked','checked')[0].checked=true;
+			if(input.length) input.attr('checked','checked')[0].checked=true;
 			// click callback, as requested here: http://plugins.jquery.com/node/1655
 			if((wantCallBack ||wantCallBack == undefined) && control.callback) control.callback.apply(input[0], [input.val(), $('a', control.current)[0]]);// callback event
 			// don't break the chain
@@ -361,16 +361,11 @@
 	
 	/*--------------------------------------------------------*/
 	
-	/*
-		### Default implementation ###
-		The plugin will attach itself to file inputs
-		with the class 'multi' when the page loads
-	*/
-	$(function(){
-	 $('input[type=radio].star').rating();
-		//if(window.location.toString().match(/(l1|l2|local)\b/gi)) $('input').show();
-	});
 	
+	  // auto-initialize plugin
+				$(function(){
+				 $('input[type=radio].star').rating();
+				});
 	
 	
 /*# AVOID COLLISIONS #*/
