@@ -1,5 +1,5 @@
 /*
- ### jQuery Star Rating Plugin v4.10 - 2013-03-12 ###
+ ### jQuery Star Rating Plugin v4.11 - 2013-03-14 ###
  * Home: http://www.fyneworks.com/jquery/star-rating/
  * Code: http://code.google.com/p/jquery-star-rating-plugin/
  *
@@ -306,7 +306,7 @@
 			// trigger change on current or last selected input
 			$(current.length? current : lastipt ).trigger({ type:'change', selfTriggered:true });
 			// click callback, as requested here: http://plugins.jquery.com/node/1655
-			if((wantCallBack ||wantCallBack == undefined) && control.callback) control.callback.apply(input[0], [input.val(), $('a', control.current)[0]]);// callback event
+			if((wantCallBack || wantCallBack == undefined) && control.callback) control.callback.apply(current[0], [current.val(), $('a', control.current)[0]]);// callback event
 			// don't break the chain
 			return this;
   },// $.fn.rating.select
